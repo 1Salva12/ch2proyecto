@@ -1,0 +1,113 @@
+/* Importar una fuente limpia similar a la de la imagen */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px; /* Ancho similar al de la captura */
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de Nombre y Apellidos */
+.row-split {
+    display: flex;
+    align-items: flex-end; /* Alinea la línea inferior con el cuadro */
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* El cuadro negro redondeado para "Nombre" */
+.input-box-outline {
+    flex: 1;
+    border: 1.5px solid #000000;
+    border-radius: 10px; /* Bordes redondeados como en la foto */
+    display: flex;
+    align-items: center;
+    padding: 2px 10px;
+    height: 55px; /* Altura fija para el cuadro */
+}
+
+.cursor {
+    font-size: 20px;
+    color: #000;
+    margin-right: 2px;
+    font-weight: 300;
+}
+
+/* Estilo general de los campos de texto */
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    background: transparent;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+/* Las líneas grises delgadas de los demás campos */
+.input-line {
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0 !important;
+    padding: 10px 0;
+    margin-bottom: 25px;
+    border-radius: 0;
+}
+
+/* Ajuste específico para que "Apellidos" no tenga margen extra */
+.row-split .input-line {
+    margin-bottom: 0; 
+    padding-bottom: 15px;
+}
+
+/* Botón Gris Oscuro */
+.btn-black {
+    width: 100%;
+    padding: 16px;
+    background-color: #3d3d3d; /* Gris carbón de la imagen */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-black:hover {
+    background-color: #2b2b2b;
+}
+
+/* Texto del pie de página */
+.footer-text {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 25px;
+}
+
+.footer-text a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+}

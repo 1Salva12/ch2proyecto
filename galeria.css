@@ -1,0 +1,181 @@
+/* --- RESET & VARIABLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #EDEBE4;
+    --accent-yellow: #E9F95E;
+    --font-serif: 'Times New Roman', Times, serif;
+    --font-sans: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-serif);
+    color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 15px;
+    font-size: 0.75rem;
+    font-family: var(--font-sans);
+    letter-spacing: 2px;
+}
+
+.nav-links a.active {
+    border-bottom: 1.5px solid #000;
+    padding-bottom: 2px;
+}
+
+.header-right {
+    display: flex;
+    gap: 25px;
+    font-size: 0.7rem;
+    font-family: var(--font-sans);
+    font-weight: bold;
+}
+
+/* --- LAYOUT DE GALERÍA --- */
+.main-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 400;
+    margin: 60px 0 80px 80px;
+}
+
+.gallery-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Estilo Leyendas */
+.caption {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: #444;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+/* Bloque de dos imágenes asimétricas */
+.grid-pair {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    margin-bottom: 150px;
+    align-items: flex-end;
+}
+
+.item.right {
+    padding-bottom: 100px; /* Eleva la imagen derecha */
+}
+
+/* Imagen Centralizada */
+.item.center {
+    width: 60%;
+    margin: 0 auto 150px auto;
+}
+
+/* Imagen desplazada a la izquierda */
+.item.offset-left {
+    width: 45%;
+    margin-left: 10%;
+    margin-bottom: 150px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* --- SECCIÓN HERO INFERIOR --- */
+.hero-bottom {
+    margin-top: 100px;
+}
+
+.full-img-container {
+    position: relative;
+}
+
+.top-caption {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.cta-area {
+    text-align: center;
+    padding: 120px 0;
+}
+
+.hero-text {
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.hero-text em {
+    font-style: italic;
+}
+
+.btn-empezar {
+    background-color: var(--accent-yellow);
+    border: none;
+    padding: 18px 80px;
+    font-family: var(--font-sans);
+    font-weight: bold;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-empezar:hover {
+    transform: scale(1.05);
+}
+
+.black-footer {
+    background-color: #1a1a1a;
+    height: 100px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .grid-pair {
+        grid-template-columns: 1fr;
+    }
+    .item.right, .item.center, .item.offset-left {
+        width: 100%;
+        margin: 0 0 60px 0;
+        padding-bottom: 0;
+    }
+    .main-title {
+        margin-left: 20px;
+    }
+}
